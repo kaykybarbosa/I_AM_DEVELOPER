@@ -24,7 +24,7 @@ class IAmDeveloper extends StatelessWidget {
         body: Column(
           children: [
             Container(
-              margin: const EdgeInsets.only(left: 10.0, top: 10.0, bottom: 25.0),
+              margin: const EdgeInsets.only(left: 10.0, top: 10.0),
               child: const Row(
                 children: [
                   CircleAvatar(
@@ -35,12 +35,30 @@ class IAmDeveloper extends StatelessWidget {
                   ),
                   Text('Kayky Barbosa',
                     style: TextStyle(
-                    fontSize: 30.0,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'Poppins'),)
+                      fontSize: 30.0,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Poppins'),
+                  ),
                 ],
               ),
+            ),
+            const Row(
+              children: [
+                SizedBox(
+                  width: 110.0,
+                ),
+                Text('Back-End Developer',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18.0,
+                    fontStyle: FontStyle.italic,
+                    fontFamily: 'Lora'),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 25.0,
             ),
             const Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -55,15 +73,15 @@ class IAmDeveloper extends StatelessWidget {
                 )
               ],
             ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image(
-                  image: AssetImage('assets/imagens/developer.jpg'),
-                  width: 300,
-                  height: 260,)
-              ],
-            ),
+            // const Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [
+            //     Image(
+            //       image: AssetImage('assets/imagens/developer.jpg'),
+            //       width: 300,
+            //       height: 260,)
+            //   ],
+            // ),
             const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -86,7 +104,67 @@ class IAmDeveloper extends StatelessWidget {
                 Image(image: AssetImage('assets/imagens/css.png'), width: 70,),
                 Image(image: AssetImage('assets/imagens/docker.png'), width: 70,),
               ],
-            )
+            ),
+            Container(
+              margin: const EdgeInsets.only(left: 25.0, top: 35.0),
+              child: const Row(
+                children: [
+                  Text('Contate-me:',
+                    style: TextStyle(
+                      fontSize: 22.0,
+                      color: Colors.white
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              color: Colors.white,
+              padding: const EdgeInsets.all(10.0),
+              child: const Row(
+                children: [
+                  Icon(
+                    Icons.phone,
+                    size: 25.0,
+                    color:Color.fromARGB(255, 2, 70, 102),
+                  ),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Text('+55 98 98606-4174',
+                    style: TextStyle(
+                      color:Color.fromARGB(255, 2, 70, 102),
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              color: Colors.white,
+              padding: const EdgeInsets.all(10.0),
+              margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              child: const Row(
+                children: [
+                  Icon(Icons.email,
+                    size: 25.0,
+                    color:Color.fromARGB(255, 2, 70, 102),
+                  ),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Text('contatokaykybarbosa@gmail.com',
+                    style: TextStyle(
+                      color:Color.fromARGB(255, 2, 70, 102),
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
