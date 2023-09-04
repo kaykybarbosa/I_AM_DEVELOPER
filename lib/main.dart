@@ -13,35 +13,58 @@ class IAmDeveloper extends StatelessWidget {
       home: Scaffold(
         backgroundColor: const Color.fromARGB(255, 2, 70, 102),
         appBar: AppBar(
-          title: const Text('I AM DEVELOPER'),
+          title: const Text('I AM DEVELOPER',
+            style: TextStyle(
+              fontFamily: 'Lora',
+            ),
+          ),
           centerTitle: true,
           backgroundColor: const Color.fromARGB(255, 4, 71, 143),
         ),
-        body: const Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        body: Column(
           children: [
-            Row(
+            Container(
+              margin: const EdgeInsets.only(left: 10.0, top: 10.0, bottom: 25.0),
+              child: const Row(
+                children: [
+                  CircleAvatar(
+                    backgroundImage: AssetImage('assets/my_face/kayky.jpg'),
+                    radius: 35.0),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Text('Kayky Barbosa',
+                    style: TextStyle(
+                    fontSize: 30.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Poppins'),)
+                ],
+              ),
+            ),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   'SOME OF THE TECHNOLOGIES I USE:',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 22
+                    fontSize: 20,
+                    fontFamily: 'Lora',
                   ),
                 )
               ],
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image(
                   image: AssetImage('assets/imagens/developer.jpg'),
-                  width: 340,
-                  height: 300,)
+                  width: 300,
+                  height: 260,)
               ],
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image(image: AssetImage('assets/imagens/java.png'), width: 70,),
@@ -51,7 +74,10 @@ class IAmDeveloper extends StatelessWidget {
                 Image(image: AssetImage('assets/imagens/python.png'), width: 70,),
               ],
             ),
-            Row(
+            const SizedBox(
+              height: 10.0,
+            ),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image(image: AssetImage('assets/imagens/dart.png'), width: 70,),
