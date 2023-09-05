@@ -1,13 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:i_am_developer/home_screen.dart';
 
 void main() => runApp(const IAmDeveloper());
 
-class IAmDeveloper extends StatelessWidget {
+class IAmDeveloper extends StatefulWidget{
   const IAmDeveloper({super.key});
 
   @override
-  Widget build(BuildContext context){
+  State<IAmDeveloper> createState() => _IAmDeveloperState();
+}
 
+class _IAmDeveloperState extends State<IAmDeveloper> {
+  showHomeScreen(){
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const HomeScreen(),
+      ),
+    );
+  }
+  
+  @override
+  Widget build(BuildContext context){
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -73,15 +87,9 @@ class IAmDeveloper extends StatelessWidget {
                 )
               ],
             ),
-            // const Row(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   children: [
-            //     Image(
-            //       image: AssetImage('assets/imagens/developer.jpg'),
-            //       width: 300,
-            //       height: 260,)
-            //   ],
-            // ),
+            const SizedBox(
+              height: 15.0,
+            ),
             const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -106,10 +114,10 @@ class IAmDeveloper extends StatelessWidget {
               ],
             ),
             Container(
-              margin: const EdgeInsets.only(left: 25.0, top: 35.0),
+              margin: const EdgeInsets.only(left: 25.0, top: 55.0),
               child: const Row(
                 children: [
-                  Text('Contate-me:',
+                  Text('Contact:',
                     style: TextStyle(
                       fontSize: 22.0,
                       color: Colors.white
@@ -165,6 +173,10 @@ class IAmDeveloper extends StatelessWidget {
                 ],
               ),
             ),
+          ElevatedButton(
+            onPressed: showHomeScreen,
+            child: const Text('Go to the HOME'),
+          )
           ],
         ),
       ),
