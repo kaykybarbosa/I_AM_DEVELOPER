@@ -14,7 +14,27 @@ class _HomeScreenState extends State<HomeScreen>{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Welcome to My Project'),
+        title: const Text('Welcome to my App'),
+      ),
+      body: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(
+                  onPressed: (){},
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateColor.resolveWith(
+                      (states) => Colors.red,
+                    ),
+                    foregroundColor: MaterialStateColor.resolveWith((states) => Colors.black),
+                    padding: MaterialStateProperty.all(const EdgeInsets.symmetric(vertical: 15.0, horizontal: 15.0))
+                  ),
+                  child: const Text('Profile'),
+                ),
+              ],
+            )
+          ],
       ),
     );
   }

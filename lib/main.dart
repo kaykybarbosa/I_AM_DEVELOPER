@@ -3,28 +3,35 @@ import 'package:i_am_developer/home_screen.dart';
 
 void main() => runApp(const IAmDeveloper());
 
-class IAmDeveloper extends StatefulWidget{
+class IAmDeveloper extends StatelessWidget{
   const IAmDeveloper({super.key});
 
   @override
-  State<IAmDeveloper> createState() => _IAmDeveloperState();
-}
-
-class _IAmDeveloperState extends State<IAmDeveloper> {
-  showHomeScreen(){
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const HomeScreen(),
-      ),
+  Widget build(BuildContext context){
+    return MaterialApp(
+      title: 'I Am Developer',
+      initialRoute: '/home',
+      routes: {
+        '/': (context) => const IAmDeveloperPage(),
+        '/home': (context) => const HomeScreen(),
+      },
+      debugShowCheckedModeBanner: false,
     );
   }
+}
+
+class IAmDeveloperPage extends StatefulWidget{
+  const IAmDeveloperPage({super.key});
+
+  @override
+  State<IAmDeveloperPage> createState() => _IAmDeveloperState();
+}
+
+class _IAmDeveloperState extends State<IAmDeveloperPage>{
   
   @override
   Widget build(BuildContext context){
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         backgroundColor: const Color.fromARGB(255, 2, 70, 102),
         appBar: AppBar(
           title: const Text('I AM DEVELOPER',
@@ -173,13 +180,13 @@ class _IAmDeveloperState extends State<IAmDeveloper> {
                 ],
               ),
             ),
-          ElevatedButton(
-            onPressed: showHomeScreen,
-            child: const Text('Go to the HOME'),
-          )
+            ElevatedButton(
+              onPressed: (){
+                Navigator.pushNamed(context, '/home');
+              },
+              child: const Text('Go to the Home'),),
           ],
         ),
-      ),
-    );
+      );
   }
 }
