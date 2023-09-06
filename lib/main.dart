@@ -16,6 +16,9 @@ class IAmDeveloper extends StatelessWidget{
         '/home': (context) => const HomeScreen(),
       },
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 2, 70, 102))
+      ),
     );
   }
 }
