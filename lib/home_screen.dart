@@ -38,90 +38,73 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               margin:
                   const EdgeInsets.symmetric(vertical: 10.0, horizontal: 110.0),
-              padding: const EdgeInsets.all(10.0),
-              decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 14, 90, 153),
-                borderRadius: BorderRadius.all(Radius.circular(20.0)),
-              ),
-              child: Row(
-                children: [
-                  const SizedBox(width: 5.0),
-                  const Icon(
-                    Icons.account_circle,
-                    color: Colors.white,
-                    size: 40.0,
-                  ),
-                  const SizedBox(width: 5.0),
-                  TextButton(
-                    onPressed: () {},
-                    child: const Text(
-                      'Profile',
-                      style: TextStyle(fontSize: 20.0, color: Colors.white),
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0)),
+                  padding: const EdgeInsets.all(10.0),
+                  backgroundColor: const Color.fromARGB(255, 14, 90, 153),
+                ),
+                child: const Row(
+                  children: [
+                    Icon(
+                      Icons.account_circle,
+                      size: 40.0,
                     ),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.all(10.0),
-              margin:
-                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 110.0),
-              decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 14, 90, 153),
-                borderRadius: BorderRadius.all(Radius.circular(20.0)),
-              ),
-              child: Row(
-                children: [
-                  const SizedBox(width: 5.0),
-                  const Icon(
-                    Icons.construction_rounded,
-                    color: Colors.white,
-                    size: 40.0,
-                  ),
-                  const SizedBox(width: 5.0),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.resolveWith(
-                        (Set<MaterialState> states) {
-                          if (states.contains(MaterialState.pressed)) {
-                            return Colors.red;
-                          }
-                          return const Color.fromARGB(255, 14, 90, 153);
-                        },
-                      ),
-                    ),
-                    child: const Text(
-                      'Skills',
-                      style: TextStyle(color: Colors.white, fontSize: 20.0),
-                    ),
-                  ),
-                ],
+                    SizedBox(width: 5.0),
+                    Text('Profile', style: TextStyle(fontSize: 20.0)),
+                  ],
+                ),
               ),
             ),
             Container(
               margin:
                   const EdgeInsets.symmetric(vertical: 10.0, horizontal: 110.0),
-              padding: const EdgeInsets.all(10.0),
-              decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 14, 90, 153),
-                borderRadius: BorderRadius.all(Radius.circular(20.0)),
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.all(10.0),
+                    backgroundColor: const Color.fromARGB(255, 14, 90, 153),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0))),
+                child: const Row(
+                  children: [
+                    SizedBox(width: 5.0),
+                    Icon(
+                      Icons.construction_rounded,
+                      size: 40.0,
+                    ),
+                    SizedBox(width: 5.0),
+                    Text('Skills', style: TextStyle(fontSize: 20.0))
+                  ],
+                ),
               ),
-              child: Row(
-                children: [
-                  const SizedBox(width: 5.0),
-                  const Icon(
-                    Icons.contact_mail_rounded,
-                    color: Colors.white,
-                    size: 40.0,
-                  ),
-                  const SizedBox(width: 5.0),
-                  TextButton(
-                    onPressed: () {},
-                    child: const Text('Contacts',
-                        style: TextStyle(fontSize: 20.0, color: Colors.white)),
-                  ),
-                ],
+            ),
+            Container(
+              margin:
+                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 110.0),
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0)),
+                    padding: const EdgeInsets.all(10.0),
+                    backgroundColor: const Color.fromARGB(255, 14, 90, 153)),
+                child: const Row(
+                  children: [
+                    SizedBox(width: 5.0),
+                    Icon(
+                      Icons.contact_mail_rounded,
+                      size: 40.0,
+                    ),
+                    SizedBox(width: 10.0),
+                    Text(
+                      'Contacts',
+                      style: TextStyle(fontSize: 21.0),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
