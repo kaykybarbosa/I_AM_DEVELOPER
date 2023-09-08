@@ -13,11 +13,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 2, 70, 102),
-        appBar: AppBar(
-          title: const Center(
-            child: Text('I AM DEVELOPER'),
-          ),
-        ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -85,7 +80,9 @@ class _HomeScreenState extends State<HomeScreen> {
               margin:
                   const EdgeInsets.symmetric(vertical: 10.0, horizontal: 110.0),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/contacts');
+                },
                 style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20.0)),

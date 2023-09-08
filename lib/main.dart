@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:i_am_developer/contacts.dart';
 import 'package:i_am_developer/home_screen.dart';
 
 void main() => runApp(const IAmDeveloper());
@@ -14,6 +15,7 @@ class IAmDeveloper extends StatelessWidget {
       routes: {
         '/dev': (context) => const IAmDeveloperPage(),
         '/home': (context) => const HomeScreen(),
+        '/contacts': (context) => const Contacts()
       },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -204,6 +206,7 @@ class _IAmDeveloperState extends State<IAmDeveloperPage> {
               ],
             ),
           ),
+          
         ],
       ),
     );
