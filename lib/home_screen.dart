@@ -34,7 +34,9 @@ class _HomeScreenState extends State<HomeScreen> {
               margin:
                   const EdgeInsets.symmetric(vertical: 10.0, horizontal: 110.0),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/dev');
+                },
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0)),
@@ -57,7 +59,9 @@ class _HomeScreenState extends State<HomeScreen> {
               margin:
                   const EdgeInsets.symmetric(vertical: 10.0, horizontal: 110.0),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/skills');
+                },
                 style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.all(10.0),
                     backgroundColor: const Color.fromARGB(255, 14, 90, 153),
