@@ -9,11 +9,8 @@ class Contacts extends StatefulWidget {
 }
 
 // kaykykbuloso@123
-var emailUri = Uri(scheme: 'mailto', path: 'contatokaykybarbosa@gmail.com');
-
-var linkedinUri = Uri(
-    scheme: 'https',
-    path: 'www.linkedin.com/in/kayky-bruno-silva-barbosa-20766b237');
+var _emailUri = Uri(scheme: 'mailto', path: 'contatokaykybarbosa@gmail.com');
+var _linkedinUri = Uri(scheme: 'https', path: 'www.linkedin.com/in/kayky-bruno-silva-barbosa-20766b237');
 
 class _ContactsState extends State<Contacts> {
   Future<void> _linksUri(Uri uri) async {
@@ -40,7 +37,7 @@ class _ContactsState extends State<Contacts> {
               margin:
                   const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
               child: ElevatedButton(
-                onPressed: () => _linksUri(emailUri),
+                onPressed: () => _linksUri(_emailUri),
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.all(10.0),
                   shape: RoundedRectangleBorder(
@@ -72,7 +69,7 @@ class _ContactsState extends State<Contacts> {
                       borderRadius: BorderRadius.circular(20.0)),
                   padding: const EdgeInsets.all(10.0),
                 ),
-                onPressed: () => _linksUri(linkedinUri),
+                onPressed: () => _linksUri(_linkedinUri),
                 child: const Row(
                   children: [
                     SizedBox(width: 5.0),
@@ -83,12 +80,12 @@ class _ContactsState extends State<Contacts> {
                     SizedBox(width: 5.0),
                     Text(
                       'Kayky Barbosa',
-                      style: TextStyle(fontSize: 18.0),
+                      style: TextStyle(fontSize: 19.0),
                     )
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

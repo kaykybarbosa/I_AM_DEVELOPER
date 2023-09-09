@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   const EdgeInsets.symmetric(vertical: 10.0, horizontal: 110.0),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/dev');
+                  Navigator.pushNamed(context, '/profile');
                 },
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
