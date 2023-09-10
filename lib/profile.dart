@@ -23,12 +23,16 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 2, 70, 102),
+        backgroundColor: const Color.fromARGB(255, 244, 241, 241),
         appBar: AppBar(
+          iconTheme: const IconThemeData(color: Colors.black),
           title: const Text(
             'Profile',
+            style: TextStyle(
+              color: Colors.black,
+            ),
           ),
-          backgroundColor: const Color.fromARGB(255, 4, 71, 143),
+          backgroundColor: const Color.fromARGB(255, 215, 215, 215),
         ),
         body: Column(
           children: [
@@ -36,33 +40,45 @@ class _ProfileState extends State<Profile> {
             Container(
               alignment: Alignment.center,
               padding: const EdgeInsets.all(10.0),
-              child: const Column(
+              child: Column(
                 children: [
-                  CircleAvatar(
+                  Container(
+                    decoration:
+                        BoxDecoration(shape: BoxShape.circle, boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.3),
+                        spreadRadius: 3,
+                        blurRadius: 3,
+                        offset: const Offset(0, 3),
+                      )
+                    ]),
+                    child: const CircleAvatar(
                       backgroundImage: AssetImage('assets/my_face/kayky.jpg'),
-                      radius: 50.0),
-                  SizedBox(height: 15.0),
-                  Text(
+                      radius: 50.0,
+                    ),
+                  ),
+                  const SizedBox(height: 10.0),
+                  const Text(
                     'Kayky Barbosa',
                     style: TextStyle(
                         fontSize: 35.0,
-                        color: Colors.white,
+                        color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        fontFamily: 'Lora'),
+                        fontFamily: 'Poppins'),
                   ),
-                  SizedBox(height: 10.0),
-                  Text(
+                  const SizedBox(height: 5.0),
+                  const Text(
                     'Back-End Developer',
                     style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontSize: 20.0,
                         fontStyle: FontStyle.italic,
-                        fontFamily: 'Lora'),
+                        fontFamily: 'Poppins'),
                   ),
                 ],
               ),
             ),
-            const SizedBox(height: 10.0),
+            const SizedBox(height: 5.0),
             Container(
               padding: const EdgeInsets.all(10.0),
               child: const Column(
@@ -72,52 +88,68 @@ class _ProfileState extends State<Profile> {
                       SizedBox(width: 15.0),
                       Image(
                         image: AssetImage('assets/icons/circulo.png'),
-                        color: Colors.white,
+                        color: Colors.black,
                         width: 10,
                       ),
                       SizedBox(width: 5.0),
                       Text(
                         '04/02/2003',
-                        style: TextStyle(fontSize: 20.0, color: Colors.white),
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.black,
+                          fontFamily: 'Poppins',
+                        ),
                       ),
                     ],
                   ),
-                  SizedBox(height: 15.0),
+                  SizedBox(height: 5.0),
                   Row(
                     children: [
                       SizedBox(width: 15.0),
                       Image(
                         image: AssetImage('assets/icons/circulo.png'),
-                        color: Colors.white,
+                        color: Colors.black,
                         width: 10.0,
                       ),
                       SizedBox(width: 5.0),
                       Text(
                         'Maranhão/ Brasil',
-                        style: TextStyle(fontSize: 20.0, color: Colors.white),
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.black,
+                          fontFamily: 'Poppins',
+                        ),
                       )
                     ],
                   ),
                 ],
               ),
             ),
-            const SizedBox(height: 8.0),
+            const SizedBox(height: 5.0),
             Container(
-              width: 350.0,
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(5.0),
+              margin: const EdgeInsets.only(left: 25.0, right: 5.0),
               child: Column(
                 children: [
                   const Row(
                     children: [
                       Text(
                         'About',
-                        style: TextStyle(fontSize: 28.0, color: Colors.white),
+                        style: TextStyle(
+                          fontSize: 28.0,
+                          color: Colors.black,
+                          fontFamily: 'Poppins',
+                        ),
                       ),
                     ],
                   ),
                   Text(
                     _about,
-                    style: const TextStyle(color: Colors.white, fontSize: 16.0),
+                    style: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.0,
+                      fontFamily: 'Poppins',
+                    ),
                   )
                 ],
               ),

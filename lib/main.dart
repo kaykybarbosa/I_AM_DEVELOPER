@@ -21,11 +21,6 @@ class IAmDeveloper extends StatelessWidget {
         '/contacts': (context) => const Contacts()
       },
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 2, 70, 102),
-        ),
-      ),
     );
   }
 }

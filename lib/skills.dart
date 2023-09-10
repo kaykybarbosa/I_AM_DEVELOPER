@@ -12,15 +12,20 @@ class _SkillsState extends State<Skills> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 2,60, 102),
+        backgroundColor: const Color.fromARGB(255, 244, 241, 241),
         appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 14, 90, 153),
-          title: const Text('Skills'),
+          iconTheme: const IconThemeData(color: Colors.black),
+          backgroundColor: const Color.fromARGB(255, 215, 215, 215),
+          title: const Text(
+            'Skills',
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 50.0),
             Container(
               alignment: Alignment.bottomCenter,
               margin:
@@ -29,49 +34,81 @@ class _SkillsState extends State<Skills> {
               child: const Text(
                 'Some of the technologies i use:',
                 style: TextStyle(
-                    fontSize: 21.0,
-                    fontFamily: 'Lora',
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
+                  fontSize: 21.0,
+                  fontFamily: 'Lora',
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             const Divider(
               thickness: 3.0,
-              color: Colors.white,
+              color: Colors.black,
               indent: 30.0,
               endIndent: 30.0,
             ),
-            const SizedBox(height: 30.0),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+            const SizedBox(height: 50.0),
+            const Column(
               children: [
-                Image(image: AssetImage('assets/imagens/java.png'), width: 60),
-                Image(
-                    image: AssetImage('assets/imagens/spring.png'), width:60),
-                Image(image: AssetImage('assets/imagens/cshap.png'), width:60),
-                Image(image: AssetImage('assets/imagens/dotnet.png'), width:60)
-              ],
-            ),
-            const SizedBox(height: 10.0),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Image(image: AssetImage('assets/imagens/git.png'), width: 60),
-                Image(
-                    image: AssetImage('assets/imagens/python.png'), width: 60),
-                Image(image: AssetImage('assets/imagens/docker.png'), width: 60),
-                Image(image: AssetImage('assets/imagens/aspnet.png'), width: 60)
-              ],
-            ),
-            const SizedBox(height: 10.0),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Image(image: AssetImage('assets/imagens/dart.png'), width:60),
-                Image(
-                    image: AssetImage('assets/imagens/flutter.png'), width:60),
-                Image(image: AssetImage('assets/imagens/html.png'), width:60),
-                Image(image: AssetImage('assets/imagens/css.png'), width:60)
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Image(
+                        image: AssetImage('assets/imagens/java.png'),
+                        width: 60),
+                    Image(
+                        image: AssetImage('assets/imagens/spring.png'),
+                        width: 60),
+                    Image(
+                        image: AssetImage('assets/imagens/cshap.png'),
+                        width: 60),
+                    Image(
+                        image: AssetImage('assets/imagens/dotnet.png'),
+                        width: 60),
+                  ],
+                ),
+                Divider(
+                  thickness: 2.0,
+                  color: Color.fromARGB(255, 215, 215, 215),
+                  indent: 25.0,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Image(
+                        image: AssetImage('assets/imagens/git.png'), width: 60),
+                    Image(
+                        image: AssetImage('assets/imagens/python.png'),
+                        width: 60),
+                    Image(
+                        image: AssetImage('assets/imagens/docker.png'),
+                        width: 60),
+                    Image(
+                        image: AssetImage('assets/imagens/aspnet.png'),
+                        width: 60)
+                  ],
+                ),
+                Divider(
+                  thickness: 2.0,
+                  color: Color.fromARGB(255, 215, 215, 215),
+                  indent: 25.0,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Image(
+                        image: AssetImage('assets/imagens/dart.png'),
+                        width: 60),
+                    Image(
+                        image: AssetImage('assets/imagens/flutter.png'),
+                        width: 60),
+                    Image(
+                        image: AssetImage('assets/imagens/html.png'),
+                        width: 60),
+                    Image(
+                        image: AssetImage('assets/imagens/css.png'), width: 60)
+                  ],
+                ),
               ],
             ),
           ],

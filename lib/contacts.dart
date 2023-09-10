@@ -10,7 +10,9 @@ class Contacts extends StatefulWidget {
 
 // kaykykbuloso@123
 var _emailUri = Uri(scheme: 'mailto', path: 'contatokaykybarbosa@gmail.com');
-var _linkedinUri = Uri(scheme: 'https', path: 'www.linkedin.com/in/kayky-bruno-silva-barbosa-20766b237');
+var _linkedinUri = Uri(
+    scheme: 'https',
+    path: 'www.linkedin.com/in/kayky-bruno-silva-barbosa-20766b237');
 
 class _ContactsState extends State<Contacts> {
   Future<void> _linksUri(Uri uri) async {
@@ -25,10 +27,14 @@ class _ContactsState extends State<Contacts> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 2, 70, 102),
+        backgroundColor: const Color.fromARGB(255, 244, 241, 241),
         appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 14, 90, 153),
-          title: const Text('Contacts'),
+          iconTheme: const IconThemeData(color: Colors.black),
+          backgroundColor: const Color.fromARGB(255, 215, 215, 215),
+          title: const Text(
+            'Contacts',
+            style: TextStyle(color: Colors.black),
+          ),
         ),
         body: Column(
           children: [
@@ -43,6 +49,7 @@ class _ContactsState extends State<Contacts> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0),
                   ),
+                  backgroundColor: const Color.fromARGB(255, 215, 215, 215),
                 ),
                 child: const Row(
                   children: [
@@ -54,7 +61,10 @@ class _ContactsState extends State<Contacts> {
                     SizedBox(width: 5.0),
                     Text(
                       'Contatokaykybarbosa@gmail.com',
-                      style: TextStyle(fontSize: 18.0),
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        color: Colors.black,
+                      ),
                     )
                   ],
                 ),
@@ -68,6 +78,7 @@ class _ContactsState extends State<Contacts> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0)),
                   padding: const EdgeInsets.all(10.0),
+                  backgroundColor: const Color.fromARGB(255, 215, 215, 215),
                 ),
                 onPressed: () => _linksUri(_linkedinUri),
                 child: const Row(
@@ -80,7 +91,10 @@ class _ContactsState extends State<Contacts> {
                     SizedBox(width: 5.0),
                     Text(
                       'Kayky Barbosa',
-                      style: TextStyle(fontSize: 19.0),
+                      style: TextStyle(
+                        fontSize: 19.0,
+                        color: Colors.black,
+                      ),
                     )
                   ],
                 ),

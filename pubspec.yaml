@@ -40,13 +40,14 @@ dependencies:
   cupertino_icons: ^1.0.2
 
 flutter_native_splash:
-  image: "assets/icons/splash_icon.png"
+  image: "assets/icons/developer.png"
   android: true
   color: "#39A7FE"
 
 flutter_launcher_icons:
-  image_path: "assets/icons/launcher_icon.png"
+  image_path: "assets/icons/developer.png"
   android: "launcher_icon"
+  size: 400
 
 dev_dependencies:
   flutter_test:
@@ -65,7 +66,7 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
 
-  # The following line ensures that the Material Icons font is
+  # The following line ensures that the Material IconsM font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
