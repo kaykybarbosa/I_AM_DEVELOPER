@@ -11,7 +11,7 @@ class Contacts extends StatefulWidget {
 var _emailUri = Uri(scheme: 'mailto', path: 'contatokaykybarbosa@gmail.com');
 var _linkedinUri = Uri(
     scheme: 'https',
-    path: 'www.linkedin.com/in/kayky-bruno-silva-barbosa-20766b237');
+    path: 'www.linkedin.com/in/kayky-barbosa');
 
 class _ContactsState extends State<Contacts> {
   Future<void> _linksUri(Uri uri) async {
