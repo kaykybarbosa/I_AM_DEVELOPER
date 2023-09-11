@@ -16,26 +16,26 @@
 ## Layout
 - Loading
 
-<img style='width:80' alt='loading image' src='./readme_img/launcher.png'/>
+<img style='width:50' alt='loading image' src='./readme_img/launcher.png'/>
 
 - Home Screen
 
-<img alt='home screen image' style='width:80' src='./readme_img/home.png'/>
+<img alt='home screen image' style='width:50' src='./readme_img/home.png'/>
 
 - Profile
 
-<img alt='home screen image' style='width:80' src='./readme_img/profile.png'/>
+<img alt='home screen image' style='width:50' src='./readme_img/profile.png'/>
 
 - Some of skills
 
-<img alt='home screen image' style='width:80' src='./readme_img/skills.png'/>
+<img alt='home screen image' style='width:50' src='./readme_img/skills.png'/>
 
 - Contacts
 
-<img alt='home screen image' style='width:80' src='./readme_img/contacts.png'/>
+<img alt='home screen image' style='width:50' src='./readme_img/contacts.png'/>
 
 ## Author
-<img style="width:80px; align: left; border-radius: 40px" src="./assets/my_face/kayky.jpg" alt=" Author Image">
+<img style="width:50px; align: left; border-radius: 40px" src="./assets/my_face/kayky.jpg" alt=" Author Image">
 
 <a href = "mailto:contatokaykybarbosa@gmail.com">
     <img src="https://img.shields.io/badge/Linkedin-0077B5?style=flat&logo=linkedin&logoColor=white" heigth="50px" target="_blank" alt="Linkedin Badge">
