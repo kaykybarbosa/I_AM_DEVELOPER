@@ -16,23 +16,23 @@
 ## Layout
 - Loading
 
-<img style='width:100px' alt='loading image' src='./readme_img/launcher.png'/>
+<img style='width:140px' alt='loading image' src='./readme_img/launcher.png'/>
 
 - Home Screen
 
-<img alt='home screen image' style='width:100px' src='./readme_img/home.png'/>
+<img alt='home screen image' style='width:140pxpx' src='./readme_img/home.png'/>
 
 - Profile
 
-<img alt='home screen image' style='width:100px' src='./readme_img/profile.png'/>
+<img alt='home screen image' style='width:140pxpx' src='./readme_img/profile.png'/>
 
 - Some of skills
 
-<img alt='home screen image' style='width:100px' src='./readme_img/skills.png'/>
+<img alt='home screen image' style='width:140pxpx' src='./readme_img/skills.png'/>
 
 - Contacts
 
-<img alt='home screen image' style='width:100px' src='./readme_img/contacts.png'/>
+<img alt='home screen image' style='width:140pxpx' src='./readme_img/contacts.png'/>
 
 ## Author
 <img style="width:80px; align: left; border-radius: 40px" src="./assets/my_face/kayky.jpg" alt=" Author Image">
