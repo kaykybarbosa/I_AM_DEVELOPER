@@ -37,7 +37,7 @@
 ## Author
 <img style="width:80px; align: left; border-radius: 40px" src="./assets/my_face/kayky.jpg" alt=" Author Image">
 
-<a href = "mailto:contatokaykybarbosa@gmail.com">
+<a href = "www.linkedin.com/in/kayky-bruno-silva-barbosa-20766b237">
     <img src="https://img.shields.io/badge/Linkedin-0077B5?style=flat&logo=linkedin&logoColor=white" heigth="50px" target="_blank" alt="Linkedin Badge">
 </a>
 <a href = "mailto:contatokaykybarbosa@gmail.com">
