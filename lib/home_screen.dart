@@ -14,14 +14,10 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         body: Container(
           decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 244, 241, 241),
-                Color.fromARGB(255, 215, 215, 215)
-              ],
-              begin: Alignment.centerLeft,
-              end: Alignment.bottomRight
-            ),
+            gradient: LinearGradient(colors: [
+              Color.fromARGB(255, 244, 241, 241),
+              Color.fromARGB(255, 215, 215, 215)
+            ], begin: Alignment.centerLeft, end: Alignment.bottomRight),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -33,10 +29,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: const Text(
                   'Welcome in my App!',
                   style: TextStyle(
-                      fontSize: 30.0,
-                      fontFamily: 'Pacifico',
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
+                    fontSize: 31.0,
+                    fontFamily: 'Pacifico',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
                 ),
               ),
               const SizedBox(height: 30.0),
@@ -64,9 +61,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       Text(
                         'Profile',
                         style: TextStyle(
-                            fontSize: 20.0,
-                            fontFamily: 'Poppins',
-                            color: Colors.black),
+                          fontSize: 20.0,
+                          fontFamily: 'Poppins',
+                          color: Colors.black,
+                        ),
                       ),
                     ],
                   ),
@@ -98,9 +96,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       Text(
                         'Skills',
                         style: TextStyle(
-                            fontSize: 20.0,
-                            fontFamily: 'Poppins',
-                            color: Colors.black),
+                          fontSize: 20.0,
+                          fontFamily: 'Poppins',
+                          color: Colors.black,
+                        ),
                       )
                     ],
                   ),
@@ -128,9 +127,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       Text(
                         'Contacts',
                         style: TextStyle(
-                            fontSize: 20.0,
-                            fontFamily: 'Poppins',
-                            color: Colors.black),
+                          fontSize: 20.0,
+                          fontFamily: 'Poppins',
+                          color: Colors.black,
+                        ),
                       ),
                     ],
                   ),

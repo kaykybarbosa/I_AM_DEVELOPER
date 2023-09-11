@@ -34,7 +34,7 @@ class _SkillsState extends State<Skills> {
               child: const Text(
                 'Some of the technologies i use:',
                 style: TextStyle(
-                  fontSize: 21.0,
+                  fontSize: 23.0,
                   fontFamily: 'Lora',
                   color: Colors.black,
                   fontWeight: FontWeight.bold,

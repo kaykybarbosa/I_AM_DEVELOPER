@@ -8,7 +8,6 @@ class Contacts extends StatefulWidget {
   State<Contacts> createState() => _ContactsState();
 }
 
-// kaykykbuloso@123
 var _emailUri = Uri(scheme: 'mailto', path: 'contatokaykybarbosa@gmail.com');
 var _linkedinUri = Uri(
     scheme: 'https',
@@ -38,10 +37,10 @@ class _ContactsState extends State<Contacts> {
         ),
         body: Column(
           children: [
-            const SizedBox(height: 30.0),
+            const SizedBox(height: 50.0),
             Container(
               margin:
-                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
               child: ElevatedButton(
                 onPressed: () => _linksUri(_emailUri),
                 style: ElevatedButton.styleFrom(
@@ -62,8 +61,9 @@ class _ContactsState extends State<Contacts> {
                     Text(
                       'Contatokaykybarbosa@gmail.com',
                       style: TextStyle(
-                        fontSize: 18.0,
+                        fontSize: 16.0,
                         color: Colors.black,
+                        fontFamily: 'Poppins',
                       ),
                     )
                   ],
@@ -72,7 +72,7 @@ class _ContactsState extends State<Contacts> {
             ),
             Container(
               margin:
-                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
@@ -92,8 +92,9 @@ class _ContactsState extends State<Contacts> {
                     Text(
                       'Kayky Barbosa',
                       style: TextStyle(
-                        fontSize: 19.0,
+                        fontSize: 18.0,
                         color: Colors.black,
+                        fontFamily: 'Poppins'
                       ),
                     )
                   ],
