@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:i_am_developer/buttons/btn_home.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -37,105 +38,27 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               const SizedBox(height: 30.0),
-              Container(
-                margin: const EdgeInsets.symmetric(
-                    vertical: 10.0, horizontal: 110.0),
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/profile');
-                  },
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0)),
-                    padding: const EdgeInsets.all(10.0),
-                    backgroundColor: const Color.fromARGB(255, 215, 215, 215),
-                  ),
-                  child: const Row(
-                    children: [
-                      Icon(
-                        Icons.account_circle,
-                        size: 40.0,
-                        color: Colors.black,
-                      ),
-                      SizedBox(width: 5.0),
-                      Text(
-                        'Profile',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          fontFamily: 'Poppins',
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              BtnHome(
+                text: 'Profile',
+                icon: Icons.account_circle,
+                onPressed: () {
+                  Navigator.pushNamed(context, '/profile');
+                },
               ),
-              Container(
-                margin: const EdgeInsets.symmetric(
-                    vertical: 10.0, horizontal: 110.0),
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/skills');
-                  },
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(10.0),
-                    backgroundColor: const Color.fromARGB(255, 215, 215, 215),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                  ),
-                  child: const Row(
-                    children: [
-                      SizedBox(width: 5.0),
-                      Icon(
-                        Icons.construction_rounded,
-                        size: 40.0,
-                        color: Colors.black,
-                      ),
-                      SizedBox(width: 5.0),
-                      Text(
-                        'Skills',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          fontFamily: 'Poppins',
-                          color: Colors.black,
-                        ),
-                      )
-                    ],
-                  ),
-                ),
+              BtnHome(
+                text: 'Skills',
+                icon: Icons.construction_rounded,
+                onPressed: () {
+                  Navigator.pushNamed(context, '/skills');
+                },
               ),
-              Container(
-                margin: const EdgeInsets.symmetric(
-                    vertical: 10.0, horizontal: 110.0),
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/contacts');
-                  },
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0)),
-                    padding: const EdgeInsets.all(10.0),
-                    backgroundColor: const Color.fromARGB(255, 215, 215, 215),
-                  ),
-                  child: const Row(
-                    children: [
-                      SizedBox(width: 5.0),
-                      Icon(Icons.contact_mail_rounded,
-                          size: 40.0, color: Colors.black),
-                      SizedBox(width: 10.0),
-                      Text(
-                        'Contacts',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          fontFamily: 'Poppins',
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              BtnHome(
+                text: 'Contacts',
+                icon: Icons.contact_mail_rounded,
+                onPressed: () {
+                  Navigator.pushNamed(context, '/contacts');
+                },
+              )
             ],
           ),
         ),

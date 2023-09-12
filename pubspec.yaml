@@ -92,15 +92,15 @@ flutter:
   fonts:
     - family: Lora
       fonts:
-        - asset: fonts/Lora.ttf
+        - asset: assets/fonts/Lora.ttf
         
     - family: Poppins
       fonts:
-        - asset: fonts/Poppins.ttf
+        - asset: assets/fonts/Poppins.ttf
 
     - family: Pacifico
       fonts:
-        - asset: fonts/Pacifico.ttf
+        - asset: assets/fonts/Pacifico.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

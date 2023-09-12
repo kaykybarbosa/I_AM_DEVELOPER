@@ -70,10 +70,11 @@ class _ProfileState extends State<Profile> {
                   const Text(
                     'Back-End Developer',
                     style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 20.0,
-                        fontStyle: FontStyle.italic,
-                        fontFamily: 'Poppins'),
+                      color: Colors.black,
+                      fontSize: 20.0,
+                      fontStyle: FontStyle.italic,
+                      fontFamily: 'Poppins',
+                    ),
                   ),
                 ],
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:i_am_developer/uri_Images.dart';
 
 class Skills extends StatefulWidget {
   const Skills({super.key});
@@ -48,69 +49,24 @@ class _SkillsState extends State<Skills> {
               endIndent: 30.0,
             ),
             const SizedBox(height: 50.0),
-            const Column(
+            Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Image(
-                        image: AssetImage('assets/imagens/java.png'),
-                        width: 60),
-                    Image(
-                        image: AssetImage('assets/imagens/spring.png'),
-                        width: 60),
-                    Image(
-                        image: AssetImage('assets/imagens/cshap.png'),
-                        width: 60),
-                    Image(
-                        image: AssetImage('assets/imagens/dotnet.png'),
-                        width: 60),
-                  ],
-                ),
-                Divider(
-                  thickness: 2.0,
-                  color: Color.fromARGB(255, 215, 215, 215),
-                  indent: 25.0,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Image(
-                        image: AssetImage('assets/imagens/git.png'), width: 60),
-                    Image(
-                        image: AssetImage('assets/imagens/python.png'),
-                        width: 60),
-                    Image(
-                        image: AssetImage('assets/imagens/docker.png'),
-                        width: 60),
-                    Image(
-                        image: AssetImage('assets/imagens/aspnet.png'),
-                        width: 60)
-                  ],
-                ),
-                Divider(
-                  thickness: 2.0,
-                  color: Color.fromARGB(255, 215, 215, 215),
-                  indent: 25.0,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Image(
-                        image: AssetImage('assets/imagens/dart.png'),
-                        width: 60),
-                    Image(
-                        image: AssetImage('assets/imagens/flutter.png'),
-                        width: 60),
-                    Image(
-                        image: AssetImage('assets/imagens/html.png'),
-                        width: 60),
-                    Image(
-                        image: AssetImage('assets/imagens/css.png'), width: 60)
-                  ],
+                Wrap(
+                  children: uriImages.asMap().entries.map((e) {
+                    String imageUri = e.value.imageUri;
+
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10.0, vertical: 15.0),
+                      child: Image(
+                        image: AssetImage(imageUri),
+                        width: 60,
+                      ),
+                    );
+                  }).toList(),
                 ),
               ],
-            ),
+            )
           ],
         ),
       ),
