@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:i_am_developer/buttons/btn_contacts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Contacts extends StatefulWidget {
@@ -9,9 +10,8 @@ class Contacts extends StatefulWidget {
 }
 
 var _emailUri = Uri(scheme: 'mailto', path: 'contatokaykybarbosa@gmail.com');
-var _linkedinUri = Uri(
-    scheme: 'https',
-    path: 'www.linkedin.com/in/kayky-barbosa');
+var _linkedinUri =
+    Uri(scheme: 'https', path: 'www.linkedin.com/in/kayky-barbosa');
 
 class _ContactsState extends State<Contacts> {
   Future<void> _linksUri(Uri uri) async {
@@ -38,69 +38,19 @@ class _ContactsState extends State<Contacts> {
         body: Column(
           children: [
             const SizedBox(height: 50.0),
-            Container(
-              margin:
-                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-              child: ElevatedButton(
-                onPressed: () => _linksUri(_emailUri),
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.all(10.0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  backgroundColor: const Color.fromARGB(255, 215, 215, 215),
-                ),
-                child: const Row(
-                  children: [
-                    SizedBox(width: 5.0),
-                    Image(
-                      image: AssetImage('assets/icons/gmail.png'),
-                      width: 30.0,
-                    ),
-                    SizedBox(width: 5.0),
-                    Text(
-                      'Contatokaykybarbosa@gmail.com',
-                      style: TextStyle(
-                        fontSize: 16.0,
-                        color: Colors.black,
-                        fontFamily: 'Poppins',
-                      ),
-                    )
-                  ],
-                ),
-              ),
+            BtnContacts(
+              onPressed: _linksUri,
+              linkContact: _emailUri,
+              title: 'Contatokaykybarbosa@gmail.com',
+              assetImage: const AssetImage('assets/icons/gmail.png'),
             ),
-            Container(
-              margin:
-                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0)),
-                  padding: const EdgeInsets.all(10.0),
-                  backgroundColor: const Color.fromARGB(255, 215, 215, 215),
-                ),
-                onPressed: () => _linksUri(_linkedinUri),
-                child: const Row(
-                  children: [
-                    SizedBox(width: 5.0),
-                    Image(
-                      image: AssetImage('assets/icons/linkedin.png'),
-                      width: 30.0,
-                    ),
-                    SizedBox(width: 5.0),
-                    Text(
-                      'Kayky Barbosa',
-                      style: TextStyle(
-                        fontSize: 18.0,
-                        color: Colors.black,
-                        fontFamily: 'Poppins'
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
+            BtnContacts(
+              onPressed: _linksUri,
+              linkContact: _linkedinUri,
+              title: 'Kayky Barbosa',
+              assetImage: const AssetImage('assets/icons/linkedin.png'),
+              fontSize: 18.0,
+            )
           ],
         ),
       ),
