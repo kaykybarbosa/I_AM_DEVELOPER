@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:i_am_developer/uri_Images.dart';
+import 'package:i_am_developer/uri_images.dart';
 
 class Skills extends StatefulWidget {
   const Skills({super.key});
@@ -35,7 +35,7 @@ class _SkillsState extends State<Skills> {
               child: const Text(
                 'Some of the technologies i use:',
                 style: TextStyle(
-                  fontSize: 23.0,
+                  fontSize: 24.0,
                   fontFamily: 'Lora',
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
@@ -45,27 +45,94 @@ class _SkillsState extends State<Skills> {
             const Divider(
               thickness: 3.0,
               color: Colors.black,
-              indent: 30.0,
-              endIndent: 30.0,
+              indent: 25.0,
+              endIndent: 25.0,
             ),
             const SizedBox(height: 50.0),
-            Column(
-              children: [
-                Wrap(
-                  children: uriImages.asMap().entries.map((e) {
-                    String imageUri = e.value.imageUri;
+            Wrap(
+              children: uriImages.asMap().entries.map((e) {
+                String imageUri = e.value.imageUri;
 
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 10.0, vertical: 15.0),
-                      child: Image(
-                        image: AssetImage(imageUri),
-                        width: 60,
-                      ),
-                    );
-                  }).toList(),
-                ),
-              ],
+                List<Widget> children = [];
+
+                children.add(
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 15.0,
+                      vertical: 10.0,
+                    ),
+                    child: Image(
+                      image: AssetImage(imageUri),
+                      width: 60.0,
+                    ),
+                  ),
+                );
+
+                return Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: children,
+                );
+              }).toList(),
+            ),
+            const Divider(
+              thickness: 2.0,
+              color: Color.fromARGB(255, 215, 215, 215),
+              indent: 25.0,
+            ),
+            Wrap(
+              children: uriImages2.asMap().entries.map((e) {
+                String imagemUri = e.value.imageUri;
+
+                List<Widget> children = [];
+
+                children.add(
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 10.0,
+                      horizontal: 15.0,
+                    ),
+                    child: Image(
+                      image: AssetImage(imagemUri),
+                      width: 60.0,
+                    ),
+                  ),
+                );
+
+                return Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: children,
+                );
+              }).toList(),
+            ),
+            const Divider(
+              thickness: 2.0,
+              color: Color.fromARGB(255, 215, 215, 215),
+              indent: 25.0,
+            ),
+            Wrap(
+              children: uriImages3.asMap().entries.map((e) {
+                String imagemUri = e.value.imageUri;
+
+                List<Widget> children = [];
+
+                children.add(
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 10.0,
+                      horizontal: 15.0,
+                    ),
+                    child: Image(
+                      image: AssetImage(imagemUri),
+                      width: 60.0,
+                    ),
+                  ),
+                );
+
+                return Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: children,
+                );
+              }).toList(),
             )
           ],
         ),

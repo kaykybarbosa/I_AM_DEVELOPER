@@ -1,4 +1,4 @@
-import 'package:i_am_developer/image.dart';
+import 'package:i_am_developer/my_image.dart';
 
 const uriImages = [
   MyImage(
@@ -13,6 +13,9 @@ const uriImages = [
   MyImage(
     imageUri: 'assets/imagens/dotnet.png',
   ),
+];
+
+const uriImages2 = [
   MyImage(
     imageUri: 'assets/imagens/git.png',
   ),
@@ -24,7 +27,10 @@ const uriImages = [
   ),
   MyImage(
     imageUri: 'assets/imagens/aspnet.png',
-  ),
+  )
+];
+
+const uriImages3 = [
   MyImage(
     imageUri: 'assets/imagens/dart.png',
   ),
@@ -36,5 +42,5 @@ const uriImages = [
   ),
   MyImage(
     imageUri: 'assets/imagens/css.png',
-  ),
+  )
 ];
