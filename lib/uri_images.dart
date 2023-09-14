@@ -44,3 +44,9 @@ const uriImages3 = [
     imageUri: 'assets/imagens/css.png',
   )
 ];
+
+const uriImages4 = [
+  MyImage(
+    imageUri: 'assets/imagens/aws.png',
+  )
+];

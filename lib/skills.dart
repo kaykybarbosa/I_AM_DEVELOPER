@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:i_am_developer/show_images.dart';
 import 'package:i_am_developer/uri_images.dart';
 
 class Skills extends StatefulWidget {
@@ -42,98 +43,22 @@ class _SkillsState extends State<Skills> {
                 ),
               ),
             ),
-            const Divider(
+           const Divider(
               thickness: 3.0,
               color: Colors.black,
               indent: 25.0,
               endIndent: 25.0,
             ),
             const SizedBox(height: 50.0),
-            Wrap(
-              children: uriImages.asMap().entries.map((e) {
-                String imageUri = e.value.imageUri;
-
-                List<Widget> children = [];
-
-                children.add(
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 15.0,
-                      vertical: 10.0,
-                    ),
-                    child: Image(
-                      image: AssetImage(imageUri),
-                      width: 60.0,
-                    ),
-                  ),
-                );
-
-                return Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: children,
-                );
-              }).toList(),
+            const ShowImages(
+              images: uriImages,
             ),
-            const Divider(
-              thickness: 2.0,
-              color: Color.fromARGB(255, 215, 215, 215),
-              indent: 25.0,
+            const ShowImages(
+              images: uriImages2,
             ),
-            Wrap(
-              children: uriImages2.asMap().entries.map((e) {
-                String imagemUri = e.value.imageUri;
-
-                List<Widget> children = [];
-
-                children.add(
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 10.0,
-                      horizontal: 15.0,
-                    ),
-                    child: Image(
-                      image: AssetImage(imagemUri),
-                      width: 60.0,
-                    ),
-                  ),
-                );
-
-                return Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: children,
-                );
-              }).toList(),
+            const ShowImages(
+              images: uriImages3,
             ),
-            const Divider(
-              thickness: 2.0,
-              color: Color.fromARGB(255, 215, 215, 215),
-              indent: 25.0,
-            ),
-            Wrap(
-              children: uriImages3.asMap().entries.map((e) {
-                String imagemUri = e.value.imageUri;
-
-                List<Widget> children = [];
-
-                children.add(
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 10.0,
-                      horizontal: 15.0,
-                    ),
-                    child: Image(
-                      image: AssetImage(imagemUri),
-                      width: 60.0,
-                    ),
-                  ),
-                );
-
-                return Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: children,
-                );
-              }).toList(),
-            )
           ],
         ),
       ),
